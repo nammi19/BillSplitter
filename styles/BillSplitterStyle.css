@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+body{
+    background-image: url("../images/bill_splitter_background_image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+    background-attachment: fixed;
+    
+    color: white;
+    
+}
+header{
+    text-align: center;
+    font-family: sans-serif;
+    color: red;
+    
+}
+form{
+    
+}
+.wrapper {
+    position: relative;
+    height: auto;
+}
+#contentDiv{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: absolute;
+    width: 40%;
+    margin-top: 10%;
+    animation: 1.2s linear 0s slide 1 forwards;
+    font-size: 30px;
+    font-family: Times New Roman;
+}
+#titleDiv{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin-left: 5%;
+    animation: drop 2s forwards normal;
+}
+#title_image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+@keyframes slide{
+    from { left: 101%;}
+    to {
+        left: 94%;
+        transform: translateX(-100%);
+    }
+}
+@keyframes drop {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 175px;
+    }
+}
+#inBillLbl{
+	margin-right: 0px;
+}
+#bill{
+	text-align: center;
+    font-size: 25px;
+    font-family: Times New Roman;
+}
+#tipLbl{
+	margin-right: 2.1em;
+}
+#tip{
+	text-align: center;
+    font-size: 25px;
+    font-family: Times New Roman; 
+}
+
+#tipCheck{
+    margin-left: 20px;
+}
+#tipCheckLbl{
+    padding: 10px;
+}
+#totalPeople{
+	text-align: center;
+    font-size: 25px;
+    font-family: Times New Roman;
+}
+
+.buttons{
+	margin-top: 5px;
+    font-size: 20px;
+    font-family: Times New Roman;
+}
+.personForm{
+	margin-top: 5px;
+    font-size: 25px;
+    font-family: Times New Roman;
+}
+.peopleName{
+	margin-right: 5px;
+	text-align: center;
+    font-size: 25px;
+    font-family: Times New Roman;
+}
+.peoplePercent{
+	margin-right: 5px;
+	text-align: center;
+    font-size: 25px;
+    font-family: Times New Roman;
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bill Splitter</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="./styles/BillSplitterStyle.css">
+
+        <script type="text/javascript" src="./scripts/BillSplitterScript.js"></script>
+	</head>
+	<body>
+		<header>
+			<title>Going Dutch</title>
+		</header>
+		<div class="wrapper">
+			<div id=titleDiv>
+				<img id="title_image" alt="headerImage" src="images/title_image.jpg"/>
+			</div>
+			<div id="contentDiv">
+				<form id="initialBillForm">
+					<label id="inBillLbl">Initial Bill : $</label>
+					<input  id="bill" type="number" step=".01" min="0.0" name="bill" value="0.00" onchange="setTotalBill(totalBillCalc());setPersonalBill();" required><!-- step: increasing by 1 cents -->
+				</form>
+				<form id=tipForm>
+					<label id="tipLbl">Tips : %</label>
+					<input id="tip" type="number" step="1" min="1" name="tip" value = "0" onchange="tipCalc();setTotalBill(totalBillCalc());setPersonalBill();">
+					<label id="calTip">  = $0.00</label>
+					<input  id="tipCheck" type="checkbox" name="tipCheck" onchange="setTotalBill(totalBillCalc());setPersonalBill();"/><label id="tipCheckLbl" for="tipCheck"> Include tip?</label>
+				</form>
+				
+				<h3 id="totalBill">Total Bill : $0.00</h3>
+				<form id="totalPeopleForm">
+					<label id="totalPeopleLbl">Number of People: </label>
+					<input id="totalPeople" type="number" step="1" min="1" name="totalPeople" value= "1"onchange="createPeopleElements();setPersonalBill();">
+				</form>
+				<div id="peoplesDiv"></div>
+				
+				<button id="resetBtn" class="buttons" type="reset" onclick="allreset()">Reset</button>
+				<button id="calculateBtn" class="buttons" onclick="setPersonalBill();submit();">Show Receipt</button>
+				<!--<button id="submitBtn" class="buttons" type="submit" onclick="submit()">Submit</button>-->
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
